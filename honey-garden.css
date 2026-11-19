@@ -1,1 +1,91 @@
-.hg-company{width:min(1200px,calc(100% - 48px));margin:1rem auto 0;padding:1rem 0;border-top:1px solid #ffffff26;font-size:.78rem;line-height:1.6;color:#c4c4ba}.hg-company a{text-decoration:underline}.hg-lockup{display:inline-block;white-space:nowrap;font-weight:700;letter-spacing:-.035em}.hg-lockup img{width:42px;height:42px;object-fit:contain;vertical-align:middle;margin-right:8px}.hg-contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.hg-contact-actions a{display:inline-block;border:1px solid #d5fa78;border-radius:24px;padding:12px 18px;text-decoration:none}.hg-contact-actions a:focus-visible{outline:2px solid #d5fa78;outline-offset:3px}
+:root {
+  --hg-gold: #e9b85f;
+  --hg-gold-light: #ffe1a7;
+  --hg-ink: #faf3e8;
+  --hg-dark: #15100d;
+  --hg-border: #423328;
+}
+
+.hg-company {
+  width: min(1200px, calc(100% - 48px));
+  margin: 1rem auto 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--hg-border);
+  font-size: .78rem;
+  line-height: 1.6;
+  color: #c9bdb0;
+}
+
+.hg-company a {
+  color: var(--hg-gold-light);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+.hg-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--hg-ink);
+  white-space: nowrap;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.055em;
+}
+
+.hg-lockup img {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.be-home-film .be-global-nav .hg-lockup {
+  text-shadow: 0 1px 14px #120c08cc;
+}
+
+.hg-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hg-contact-actions a {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid var(--hg-gold);
+  border-radius: 24px;
+  color: var(--hg-gold-light);
+  text-decoration: none;
+}
+
+.hg-contact-actions a:first-child {
+  background: var(--hg-gold);
+  color: var(--hg-dark);
+}
+
+.hg-contact-actions a:hover {
+  border-color: var(--hg-gold-light);
+}
+
+.hg-contact-actions a:first-child:hover {
+  background: var(--hg-gold-light);
+}
+
+.hg-contact-actions a:focus-visible {
+  outline: 2px solid var(--hg-gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .hg-lockup {
+    gap: 7px;
+    font-size: 23px;
+  }
+
+  .hg-lockup img {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -4,25 +4,25 @@ function init(){
  if(document.getElementById('be-contact'))return;
  const style=document.createElement('style');
  style.textContent=`
-#be-contact{position:fixed;right:max(24px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:9000;font-family:'DM Sans',Arial,sans-serif;color:#f7f5ed}
+#be-contact{position:fixed;right:max(24px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:9000;font-family:'DM Sans',Arial,sans-serif;color:#faf3e8}
 #be-contact[hidden],#be-contact [hidden]{display:none!important}
 #be-contact *{box-sizing:border-box}
 #be-contact button,#be-contact a{-webkit-tap-highlight-color:transparent}
-#be-contact .bc-toggle{width:60px;height:60px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #d5fa78;border-radius:50%;background:#d5fa78;color:#10100f;cursor:pointer;box-shadow:0 6px 25px #0005;transition:transform .2s,background .2s}
-#be-contact .bc-toggle:hover{transform:translateY(-2px);background:#e1ff9e}
+#be-contact .bc-toggle{width:60px;height:60px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #e9b85f;border-radius:50%;background:#e9b85f;color:#15100d;cursor:pointer;box-shadow:0 6px 25px #0005;transition:transform .2s,background .2s}
+#be-contact .bc-toggle:hover{transform:translateY(-2px);background:#f6d18d}
 #be-contact svg{display:block;width:26px;height:26px}
 #be-contact .bc-close{width:21px;height:21px}
 #be-contact .bc-options{position:absolute;right:0;bottom:76px;display:flex;flex-direction:column;gap:12px;align-items:flex-end;min-width:0;animation:bc-enter .2s ease-out}
-#be-contact .bc-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:#f7f5ed;font-size:13px;font-weight:500;white-space:nowrap}
-#be-contact .bc-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border:1px solid #d5fa78;border-radius:50%;background:#10100f;color:#d5fa78;box-shadow:0 4px 16px #0004;transition:background .2s,transform .2s}
-#be-contact .bc-link:hover .bc-icon{background:#262c1b;transform:translateY(-2px)}
+#be-contact .bc-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:#faf3e8;font-size:13px;font-weight:500;white-space:nowrap}
+#be-contact .bc-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border:1px solid #e9b85f;border-radius:50%;background:#15100d;color:#e9b85f;box-shadow:0 4px 16px #0004;transition:background .2s,transform .2s}
+#be-contact .bc-link:hover .bc-icon{background:#2d261a;transform:translateY(-2px)}
 #be-contact .bc-icon.bc-telegram{background:#fff;border-color:#fff;color:#26a5e4}
 #be-contact .bc-telegram svg{width:50px;height:50px;fill:currentColor}
 #be-contact .bc-icon.bc-whatsapp{background:#25d366;border-color:#25d366;color:#fff}
 #be-contact .bc-whatsapp svg{width:29px;height:29px;fill:currentColor}
 #be-contact .bc-link:hover .bc-telegram{background:#fff}
 #be-contact .bc-link:hover .bc-whatsapp{background:#25d366}
-#be-contact :focus-visible{outline:3px solid #f7f5ed;outline-offset:5px}
+#be-contact :focus-visible{outline:3px solid #faf3e8;outline-offset:5px}
 @keyframes bc-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:600px){#be-contact{right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom))}#be-contact .bc-toggle{width:56px;height:56px}#be-contact .bc-options{bottom:72px}}
 @media(prefers-reduced-motion:reduce){#be-contact *,#be-contact .bc-options{animation:none!important;transition:none!important}}
