@@ -1,0 +1,30 @@
+/* BEYOU — editorial full-screen video hero */
+body.be-home-film{background:#10100f}
+.be-home-film .be-global-nav{position:fixed!important;inset:0 0 auto!important;background:transparent!important;border-bottom-color:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:background .25s,border-color .25s}
+.be-home-film .be-global-nav.is-scrolled{background:rgba(16,16,15,.97)!important;border-bottom-color:#343830!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important}
+.be-home-film .be-global-nav .wrap{width:min(1120px,calc(100% - 80px))}
+.be-home-film .be-global-nav .nav-inner{height:98px!important}
+.be-home-film .be-global-nav .navlinks{gap:25px!important}
+.be-home-film .be-global-nav .logo img{width:105px!important}
+.ofx-cover--film{overflow:hidden;background:#10100f;min-height:100svh;padding:180px 0 110px;align-items:center}
+.ofx-cover--film:before{display:none}
+.ofx-cover-film{position:absolute;inset:0;z-index:0;background:#10100f url('/assets/beyou-hero-poster.jpg') center/cover no-repeat}
+.ofx-cover-film video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.ofx-cover--film:after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(8,11,8,.65),rgba(8,11,8,.42) 56%,rgba(8,11,8,.23)),linear-gradient(0deg,rgba(8,11,8,.65),transparent 48%,rgba(8,11,8,.32))}
+.ofx-cover--film .ofx-shell{position:relative;z-index:2;width:min(1120px,calc(100% - 80px))}
+.ofx-cover--film .ofx-cover-grid{grid-template-columns:minmax(0,780px);gap:0}
+.ofx-cover--film .ofx-eyebrow{font-size:10px;letter-spacing:.2em;margin-bottom:24px}
+.ofx-cover--film h1{font-size:clamp(54px,5.8vw,86px);max-width:850px;line-height:1.05;letter-spacing:-.065em;font-weight:600}
+.ofx-cover--film h1 em{font-style:normal;color:#d5fa78}
+.ofx-cover--film .ofx-cover-lead{max-width:650px;color:#eef0e7;font-size:17px;line-height:1.65;margin-top:25px!important}
+.ofx-cover--film .ofx-cover-actions{margin-top:30px;gap:12px}
+.ofx-cover--film .ofx-btn{border-radius:10px;padding:16px 22px;gap:20px}
+.ofx-cover--film .ofx-btn--ghost{border-color:#ffffff3d;background:#ffffff13;backdrop-filter:blur(12px)}
+.ofx-cover--film .ofx-btn--ghost:hover{background:#ffffff26}
+.ofx-cover--film .ofx-proofline{color:#e1e5d8;gap:12px 23px;margin-top:30px;font-size:10px}
+.ofx-cover--film .ofx-scroll{z-index:2;color:#e0e5d6;left:max(40px,calc((100% - 1120px)/2));bottom:30px;font-size:9px}
+.be-home-film .beyou-snow{display:none}
+@media(min-width:1600px){.ofx-cover--film{padding-top:200px}.ofx-cover--film .ofx-cover-grid{grid-template-columns:minmax(0,850px)}}
+@media(max-width:850px){.be-home-film .be-global-nav .wrap{width:calc(100% - 40px)}.be-home-film .be-global-nav .nav-inner{height:78px!important}.be-home-film .be-global-nav .navlinks{top:78px!important;gap:0!important}.be-home-film .be-global-nav .menu{background:#10100f66!important;backdrop-filter:blur(10px)}.ofx-cover--film{padding:150px 0 95px}.ofx-cover--film .ofx-shell{width:calc(100% - 48px)}.ofx-cover--film h1{font-size:clamp(46px,8vw,70px)}.ofx-cover-film video{object-position:35% center}.ofx-cover--film:after{background:linear-gradient(90deg,#080b08b3,#080b086b),linear-gradient(0deg,#080b08c4,transparent 80%)}.ofx-cover--film .ofx-scroll{left:24px}}
+@media(max-width:480px){.ofx-cover--film{min-height:100svh;padding:135px 0 85px}.ofx-cover--film h1{font-size:clamp(42px,10.6vw,54px);line-height:1.07}.ofx-cover--film .ofx-cover-lead{font-size:15px;line-height:1.65}.ofx-cover--film .ofx-cover-actions{flex-direction:column;align-items:stretch;max-width:340px}.ofx-cover--film .ofx-proofline{gap:12px;margin-top:25px;max-width:320px;line-height:1.5}.ofx-cover--film .ofx-eyebrow{font-size:9px}.ofx-cover--film .ofx-btn{font-size:12px}.ofx-cover-film video{object-position:29% center}}
+@media(prefers-reduced-motion:reduce){.ofx-cover--film .ofx-reveal{opacity:1;transform:none}.be-home-film .be-global-nav{transition:none}}
