@@ -110,37 +110,45 @@
 
 
 
-<section id="progetto-fanslist" aria-labelledby="fanslist-heading" style="background:#15100d;color:#faf3e8;padding:clamp(70px,9vw,130px) 24px;border-top:1px solid #423328">
-  <div style="max-width:1100px;margin:auto">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid #423328;font-size:11px;font-weight:700;letter-spacing:.14em">
-      <span style="color:#e9b85f">Honey Garden / I NOSTRI PROGETTI</span>
-      <span style="color:#b6a99b">CREATOR &amp; COMMUNITY</span>
-    </div>
-
-    <div style="display:flex;flex-wrap:wrap;gap:32px 70px;align-items:end;padding:clamp(35px,5vw,65px) 0">
-      <div style="flex:1 1 400px">
-        <span style="font-size:12px;letter-spacing:.12em;color:#b6a99b">01 / FANSLIST ITALIA</span>
-        <h2 id="fanslist-heading" style="font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 0">
-          Le creator meritano<br><span style="color:#e9b85f">di essere scoperte.</span>
-        </h2>
-      </div>
-
-      <div style="flex:1 1 280px;max-width:420px">
-        <p style="line-height:1.75;color:#c9bdb0;margin:0 0 24px">
-          FansList Italia è una directory dedicata alla scoperta delle creator. Una directory dove trovare profili, recensioni e link ufficiali, in un unico posto.
-        </p>
-        <a href="https://fanslistitalia.it/" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#e9b85f;font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid #e9b85f;padding-bottom:7px">
-          Esplora FansList Italia ↗
-        </a>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #423328;padding-top:20px;font-size:11px;letter-spacing:.12em;color:#b6a99b">
-      UNA DIRECTORY PENSATA PER LE CREATOR
+<section id="progetto-fanslist" class="hg-projects" aria-labelledby="fanslist-heading">
+  <style>
+    .hg-projects{background:#15100d;color:#faf3e8;padding:clamp(70px,9vw,130px) 24px;border-top:1px solid #423328}
+    .hg-projects-inner{max-width:1100px;margin:auto}
+    .hg-projects-kicker{color:#e9b85f;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .hg-projects h2{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.05em;margin:18px 0}
+    .hg-projects-intro{color:#c9bdb0;line-height:1.65;margin:0 0 38px}
+    .hg-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .hg-project-card{display:flex;flex-direction:column;gap:15px;min-width:0;padding:26px;border:1px solid #493729;border-radius:18px;background:linear-gradient(145deg,#251a14,#1a130f)}
+    .hg-project-tag{color:#e9b85f;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+    .hg-project-card h3{font-size:1.35rem;letter-spacing:-.03em;margin:0;color:#faf3e8}
+    .hg-project-card p{color:#c9bdb0;line-height:1.6;margin:0;flex:1}
+    .hg-project-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .hg-project-links a{display:inline-flex;align-items:center;justify-content:center;border:1px solid #73583c;border-radius:999px;padding:9px 15px;color:#f4d39c;font-size:.875rem;font-weight:700;text-decoration:none}
+    .hg-project-links a:hover,.hg-project-links a:focus-visible{background:#e9b85f;border-color:#e9b85f;color:#15100d}
+    @media(max-width:760px){.hg-project-grid{grid-template-columns:1fr}.hg-project-card{padding:22px}}
+  </style>
+  <div class="hg-projects-inner">
+    <div class="hg-projects-kicker">Honey Garden / Creator &amp; community</div>
+    <h2 id="fanslist-heading">I nostri <span style="color:#e9b85f">progetti.</span></h2>
+    <p class="hg-projects-intro">Tre spazi, un mondo da scoprire.</p>
+    <div class="hg-project-grid">
+      <article class="hg-project-card">
+        <span class="hg-project-tag">Directory</span><h3>FansList Italia</h3>
+        <p>Creator, profili e link ufficiali, tutti in un unico posto.</p>
+        <div class="hg-project-links"><a href="https://fanslistitalia.it/" target="_blank" rel="noopener noreferrer" aria-label="Visita il sito FansList Italia">Sito web</a></div>
+      </article>
+      <article class="hg-project-card">
+        <span class="hg-project-tag">Creator</span><h3>Vetrina OnlyFans</h3>
+        <p>Uno spazio dedicato alla scoperta delle creator.</p>
+      </article>
+      <article class="hg-project-card">
+        <span class="hg-project-tag">Magazine</span><h3>Peachub</h3>
+        <p>Storie, interviste e novità dal mondo creator.</p>
+        <div class="hg-project-links"><a href="https://peachub.it/" target="_blank" rel="noopener noreferrer" aria-label="Visita il sito Peachub">Sito web</a><a href="https://t.me/thepeachub" target="_blank" rel="noopener noreferrer" aria-label="Vai al canale Telegram di Peachub">Telegram</a></div>
+      </article>
     </div>
   </div>
 </section>
-
 
 <section class="hg-home-guides" aria-labelledby="hg-home-guides-title">
   <h2 id="hg-home-guides-title">Guide per creator</h2>
