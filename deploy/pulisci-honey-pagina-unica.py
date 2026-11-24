@@ -14,7 +14,7 @@ keep={"index.html","favicon.png","beyou-contact-widget.js"}
 needed=[site/"index.html",site/"favicon.png",site/"beyou-contact-widget.js",site/"media/public/honey-garden-gold.png"]
 if any(not p.is_file() or p.is_symlink() for p in needed):
     raise SystemExit("STOP: manca una risorsa della pagina; nessuna modifica effettuata.")
-if (site/"media").is_symlink():
+if (site/"media").is_symlink() or (site/"media/public").is_symlink():
     raise SystemExit("STOP: cartella media inattesa; nessuna modifica effettuata.")
 html=(site/"index.html").read_text(encoding="utf-8")
 if "Honey Garden sta diventando" not in html or "https://thisisbeyou.com/" not in html:
@@ -37,6 +37,10 @@ if parser.video or unknown:
 for p in (Path("/opt/beyou-candidatura/index.php"),Path("/opt/beyou-candidatura/originale.php"),Path("/opt/beyou-candidatura/webhook")):
     if not p.is_file() or p.stat().st_size==0:
         raise SystemExit("STOP: copia indipendente della candidatura BEYOU non trovata; nessuna modifica.")
+wrapper=Path("/opt/beyou-candidatura/index.php").read_text(encoding="utf-8")
+backend=Path("/opt/beyou-candidatura/originale.php").read_text(encoding="utf-8")
+if "/opt/beyou-candidatura/originale.php" not in wrapper or "/opt/beyou-candidatura/webhook" not in backend:
+    raise SystemExit("STOP: candidatura BEYOU non indipendente; nessuna modifica.")
 if os.stat(site).st_dev!=os.stat("/root").st_dev:
     raise SystemExit("STOP: /root e il sito sono su dischi diversi; nessuna modifica.")
 if backup.exists():
