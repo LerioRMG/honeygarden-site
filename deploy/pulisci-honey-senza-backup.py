@@ -66,7 +66,7 @@ for root,dirs,names in os.walk(site,topdown=True,followlinks=False):
         remove_dirs.append(base)
 
 # Solo backup della homepage/site Honey creati con questa procedura, non quelli di Studio o BEYOU.
-backup_pattern=re.compile(r"^backup-honey-(?:home|link|rimozione-barra|barra|barra-stile|alert|footer|riga|cookie|pagina)-[0-9]{8}-[0-9]{6}\\.html$")
+backup_pattern=re.compile(r"^backup-honey-(?:home|link|rimozione-barra|barra|barra-stile|alert|footer|riga|cookie|pagina)-[0-9]{8}-[0-9]{6}\.html$")
 backup_dir_pattern=re.compile(r"^backup-honey-(?:transizione|pagina-unica)-[0-9]{8}-[0-9]{6}$")
 old_backups=[]
 for p in Path("/root").iterdir():
@@ -88,8 +88,8 @@ for p in sorted(remove_dirs,key=lambda p:len(p.parts),reverse=True):
     except OSError:
         # Le directory contenenti file nascosti o di servizio restano intatte.
         pass
-(site/"robots.txt").write_text("User-agent: *\\nAllow: /\\nSitemap: https://honeygarden.it/sitemap.xml\\n",encoding="utf-8")
-(site/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://honeygarden.it/</loc></url></urlset>\\n',encoding="utf-8")
+(site/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://honeygarden.it/sitemap.xml\n",encoding="utf-8")
+(site/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://honeygarden.it/</loc></url></urlset>\n',encoding="utf-8")
 (site/"robots.txt").chmod(0o644)
 (site/"sitemap.xml").chmod(0o644)
 for p in old_backups:
